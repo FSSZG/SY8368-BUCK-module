@@ -1,37 +1,48 @@
 # SY8368  DC-DC降压恒流恒功率电源模块
 
-#### 介绍
- SY8368 DC-DC降压恒流恒功率电源模块 专为超级电容恒流恒功率充电特别设计 模块断电后防电容反向倒灌漏电保护
+1. SY8368 DC-DC降压恒流恒功率电源模块 专为超级电容恒流恒功率充电特别设计 模块断电后防电容反向倒灌漏电保护
+2. 恒电流原理：输出电压和负载内阻恒定输出电流就恒定  通过运放采集输出分流电阻电压得到电流 和设定电流电压比较 控制芯片FB电压来控制输出电压实现输出恒流
+3. 恒功率原理：输入电压电流恒定输出功率就恒定   通过运放采集输入分流电阻电压得到电流 和设定电流电压比较 控制芯片FB电压来控制输出电压实现输出恒恒功率
 
-#### 软件架构
-软件架构说明
+#### 硬件版本
+1. 该电源模块项目共有3个版本/立创开源平台链接
+2. SY8368-CC ：https://oshwhub.com/fj956391150/heng-ya-heng-liu-dian-yuan
+3. SY8368-CP ：https://oshwhub.com/fj956391150/xiang-ya-heng-gong-shuai-dian-yuan
+4. SY8368-CCP：https://oshwhub.com/fj956391150/xiang-ya-heng-gong-shuai-dian-yuan_copy
 
+#### SY8368-CC模块 / DC-DC降压恒流恒电源模块
+1. TYPE-C快充最大可以诱骗100W（20V5A）
+2. 建议 VBUS <= 20V / VOUT < VBUS - 2V
+3. 输入电压范围：5V~21V
+4. 输出电压可调范围：0.6V~20V
+5. 输出恒流可调范围：0A~12A
 
-#### 安装教程
+#### SY8368-CP模块 / DC-DC降压恒功率电源模块
+1. TYPE-C快充最大可以诱骗100W（20V5A）
+2. 建议 VBUS <= 20V / VOUT < VBUS - 2V
+3. 输入电压范围：5V~21V
+4. 输出电压可调范围：0.6V~20V
+5. 输入恒流可调范围：0A~6.2A   输入电压电流恒定输出功率就恒定
+6. 输入功率 = 输出功率 + 各种损耗
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+#### SY8368-CCP模块 / DC-DC降压恒流恒功率电源模块
+1. TYPE-C快充最大可以诱骗100W（20V5A）
+2. 建议 VBUS <= 20V / VOUT < VBUS - 2V
+3. 输入电压范围：5V~21V
+4. 输出电压可调范围：0.6V~20V
+5. 输出恒流可调范围：0A~10A
+6. 输入恒流可调范围：0A~10A   输入电压电流恒定输出功率就恒定
+7. 输入功率 = 输出功率 + 各种损耗
 
-#### 使用说明
+#### 注意
+1. 长时间大电流使用建议强制散热
+2. 电位器精度有限  无法进行高精度调节
+3. 芯片自带保护功能 某些情况下可能优先启动 无法正常恒流恒功率
+4. 复刻元件参数以原理图为准 嘉立创EDA自动生成的BOM表可能有问题
+5. 熵 2023-3-26
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+#### 实物图片
+![输入图片说明](img/SY8368-CC-A.jpg)
+![输入图片说明](img/SY8368-CP-A.jpg)
+![输入图片说明](img/SY8368-CCP-A.jpg)
 
-#### 参与贡献
-
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
-
-
-#### 特技
-
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
